@@ -43,7 +43,7 @@ public class Main {
         for (Edge e : graph.edges) {
             if (e.flow > 0) {
                 System.out.printf("%s -> %s | przepływ: %.1f | koszt: %.1f\n", e.from.id, e.to.id, e.flow, e.cost);
-                totalCost += e.flow * e.cost;
+                totalCost += e.cost;
             }
         }
         System.out.println("\nŁączny koszt: " + totalCost);
@@ -61,7 +61,7 @@ public class Main {
         for (Edge e : graph.edges) {
             if (e.flow > 0) {
                 System.out.printf("%s -> %s | przepływ: %.1f | koszt: %.1f\n", e.from.id, e.to.id, e.flow, e.cost);
-                totalCost += e.flow * e.cost;
+                totalCost += e.cost;
             }
         }
         System.out.println("\nŁączny koszt po optymalizacji: " + totalCost);

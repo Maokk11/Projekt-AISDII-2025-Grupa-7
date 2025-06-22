@@ -125,7 +125,8 @@ public class GraphVisualizerFX extends Application {
 
             String label;
             if (node.type == NodeType.POLE || node.type == NodeType.BROWAR) {
-                label = node.id + " (" + node.type + ", " + String.format("%.1f", node.wydajnosc) + ")";
+                double wydajnoscPrzeliczona = graph.nodeJeczmien.get(node).wydajnosc;
+                label = node.id + " (" + node.type + ", " + String.format("%.1f", wydajnoscPrzeliczona) + ")";
             } else {
                 label = node.id + " (" + node.type + ")";
             }
