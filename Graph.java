@@ -88,7 +88,7 @@ public class Graph {
     // Przypisuje węzłom odpowiednie ćwiartki na podstawie ich położenia.
     public void assignCwiartki() {
         for (Node node : nodes) {
-            if (node.type == NodeType.POLE || node.type == NodeType.BROWAR) {
+            if (node.type == NodeType.POLE) {
                 boolean assigned = false;
                 for (int i = 0; i < cwiartki.size(); i++) {
                     if (isPointInPolygon(node.position, cwiartki.get(i))) {
